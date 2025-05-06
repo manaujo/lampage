@@ -1,72 +1,118 @@
-import React, { useState } from 'react';
-import { Check, Star } from 'lucide-react';
+import React, { useState } from "react";
+import { Check, Star } from "lucide-react";
 
 const Pricing: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
+    "yearly"
+  );
 
   const plans = {
     monthly: [
       {
-        name: 'Básico',
-        price: 'R$ 60,90',
-        period: '/mês',
-        highlight: 'Ideal para começar',
+        name: "Starter",
+        price: "R$ 40,00",
+        period: "/mês",
+        highlight: "Sistema de Ponto de venda e estoque",
         features: [
-          'Acesso completo às comandas e mesas',
-          'Gerenciamento para garçons e cozinha',
-          'Acesso ao dashboard',
-          'Suporte padrão',
-          'Cancelamento a qualquer momento',
-          'Teste grátis de 7 dias'
+          "Sistema de PDV completo",
+          "Controle de estoque",
+          "Dashboard e relatórios",
+          "Exportação de dados (PDF e Excel)",
+          "Relatórios avançados de vendas",
+          "Suporte padrão",
+          "Cancelamento a qualquer momento",
+          "Teste grátis de 7 dias"
         ]
       },
       {
-        name: 'Profissional',
-        price: 'R$ 85,90',
-        period: '/mês',
-        highlight: 'Mais completo',
+        name: "Básico",
+        price: "R$ 60,90",
+        period: "/mês",
+        highlight: "Ideal para começar",
         features: [
-          'Todas as funcionalidades do plano Básico',
-          'Sistema de PDV completo',
-          'Controle de estoque avançado',
-          'Relatórios detalhados',
-          'Suporte prioritário',
-          'Teste grátis de 7 dias'
+          "Acesso completo às comandas e mesas",
+          "Gerenciamento para garçons e cozinha",
+          "Controle de estoque",
+          "Acesso ao dashboard",
+          "Relatórios avançados de vendass",
+          "Exportação de dados (PDF e Excel)",
+          "Suporte padrão",
+          "Cancelamento a qualquer momento",
+          "Teste grátis de 7 dias"
+        ]
+      },
+      {
+        name: "Profissional",
+        price: "R$ 85,90",
+        period: "/mês",
+        highlight: "Mais completo",
+        features: [
+          "Todas as funcionalidades do plano Básico",
+          "Sistema de PDV completo",
+          "Integração com ifood",
+          "Controle de estoque avançado",
+          "Relatórios detalhados",
+          "Exportação de dados (PDF e Excel)",
+          "Relatórios avançados de vendas",
+          "Suporte prioritário",
+          "Cancelamento a qualquer momento",
+          "Teste grátis de 7 dias"
         ]
       }
     ],
     yearly: [
       {
-        name: 'Básico Anual',
-        price: 'R$ 599,88',
-        installments: '12x de R$ 49,99',
-        period: '/ano',
-        highlight: 'Economia garantida',
-        savings: 'Economize R$ 130,92 ao ano',
+        name: "Starter Anual",
+        price: "R$ 430,80",
+        installments: "12x de R$ 35,90",
+        period: "/ano",
+        highlight: "Economia garantida",
+        savings: "Economize R$ 49,20 ao ano",
         features: [
-          'Acesso completo às comandas e mesas',
-          'Gerenciamento para garçons e cozinha',
-          'Acesso ao dashboard',
-          'Suporte padrão',
-          'Cancelamento a qualquer momento',
-          'Teste grátis de 7 dias'
+          "Sistema de PDV completo",
+          "Controle de estoque",
+          "Dashboard e relatórios",
+          "Exportação de dados (PDF e Excel)",
+          "Relatórios avançados de vendas",
+          "Suporte padrão",
+          "Teste grátis de 7 dias"
         ]
       },
       {
-        name: 'Profissional Anual',
-        price: 'R$ 790,80',
-        installments: '12x de R$ 65,90',
-        period: '/ano',
-        highlight: 'Mais econômico',
-        savings: 'Economize R$ 240 ao ano',
+        name: "Básico Anual",
+        price: "R$ 599,88",
+        installments: "12x de R$ 49,99",
+        period: "/ano",
+        highlight: "Economia garantida",
+        savings: "Economize R$ 130,92 ao ano",
         features: [
-          'Todas as funcionalidades do plano Básico',
-          'Sistema de PDV completo',
-          'Controle de estoque avançado',
-          'Relatórios detalhados',
-          'Suporte prioritário 24/7',
-          'Acesso antecipado a novidades',
-          'Teste grátis de 7 dias'
+          "Acesso completo às comandas e mesas",
+          "Gerenciamento para garçons e cozinha",
+          "Controle de estoque",
+          "Acesso ao dashboard",
+          "Relatórios avançados de vendass",
+          "Exportação de dados (PDF e Excel)",
+          "Suporte padrão",
+          "Teste grátis de 7 dias"
+        ]
+      },
+      {
+        name: "Profissional Anual",
+        price: "R$ 790,80",
+        installments: "12x de R$ 65,90",
+        period: "/ano",
+        highlight: "Mais econômico",
+        savings: "Economize R$ 240 ao ano",
+        features: [
+          "Todas as funcionalidades do plano Básico",
+          "Sistema de PDV completo",
+          "Integração com ifood",
+          "Controle de estoque avançado",
+          "Relatórios detalhados",
+          "Exportação de dados (PDF e Excel)",
+          "Relatórios avançados de vendas",
+          "Suporte prioritário",
+          "Teste grátis de 7 dias"
         ]
       }
     ]
@@ -76,7 +122,9 @@ const Pricing: React.FC = () => {
     <section id="pricing" className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Planos e Preços</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Planos e Preços
+          </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Escolha o plano ideal para o seu negócio
           </p>
@@ -86,42 +134,42 @@ const Pricing: React.FC = () => {
           <div className="bg-gray-100 p-1 rounded-lg inline-flex">
             <button
               className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${
-                billingCycle === 'monthly'
-                  ? 'bg-white text-red-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
+                billingCycle === "monthly"
+                  ? "bg-white text-red-600 shadow-sm"
+                  : "text-gray-600 hover:text-gray-900"
               }`}
-              onClick={() => setBillingCycle('monthly')}
+              onClick={() => setBillingCycle("monthly")}
             >
               Mensal
             </button>
             <button
               className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${
-                billingCycle === 'yearly'
-                  ? 'bg-white text-red-600 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
+                billingCycle === "yearly"
+                  ? "bg-white text-red-600 shadow-sm"
+                  : "text-gray-600 hover:text-gray-900"
               }`}
-              onClick={() => setBillingCycle('yearly')}
+              onClick={() => setBillingCycle("yearly")}
             >
               Anual
             </button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {plans[billingCycle].map((plan, index) => (
             <div
               key={index}
               className={`bg-white rounded-2xl shadow-xl overflow-hidden transition-all transform ${
-                index === 1 ? 'md:scale-105 border-2 border-red-500' : ''
+                index === 2 ? "md:scale-105 border-2 border-red-500" : ""
               }`}
             >
-              {index === 1 && (
+              {index === 2 && (
                 <div className="bg-red-500 text-white text-center py-2 px-4">
                   <Star className="inline-block mr-2" size={16} />
                   <span className="text-sm font-medium">Melhor escolha</span>
                 </div>
               )}
-              
+
               <div className="p-8">
                 <div className="text-center mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -132,10 +180,14 @@ const Pricing: React.FC = () => {
                     {plan.price}
                     <span className="text-lg text-gray-600">{plan.period}</span>
                   </div>
-                  {billingCycle === 'yearly' && (
+                  {billingCycle === "yearly" && (
                     <>
-                      <div className="text-sm text-gray-600 mb-2">ou {plan.installments}</div>
-                      <div className="text-sm font-medium text-green-600">{plan.savings}</div>
+                      <div className="text-sm text-gray-600 mb-2">
+                        ou {plan.installments}
+                      </div>
+                      <div className="text-sm font-medium text-green-600">
+                        {plan.savings}
+                      </div>
                     </>
                   )}
                 </div>
@@ -152,14 +204,16 @@ const Pricing: React.FC = () => {
                 <a
                   href="https://minhaappcomandas.com/login"
                   className={`block w-full text-white text-center py-3 rounded-lg font-medium transition-colors ${
-                    index === 1 
-                      ? 'bg-red-600 hover:bg-red-700' 
-                      : 'bg-gray-600 hover:bg-gray-700'
+                    index === 2
+                      ? "bg-red-600 hover:bg-red-700"
+                      : "bg-gray-600 hover:bg-gray-700"
                   }`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {billingCycle === 'yearly' ? 'Assinar Plano Anual' : 'Comece agora'}
+                  {billingCycle === "yearly"
+                    ? "Assinar Plano Anual"
+                    : "Comece agora"}
                 </a>
               </div>
             </div>
