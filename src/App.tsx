@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Pricing from './components/Pricing';
 import Advantages from './components/Advantages';
+import Contact from './components/Contact';
 import Testimonials from './components/Testimonials';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
@@ -42,16 +44,24 @@ function App() {
         <AnimatedSection>
           <Features />
         </AnimatedSection>
-        
+
         <AnimatedSection delay={200}>
-          <CTASection />
+          <Pricing />
         </AnimatedSection>
         
         <AnimatedSection delay={300}>
-          <Advantages />
+          <CTASection />
         </AnimatedSection>
         
         <AnimatedSection delay={400}>
+          <Advantages />
+        </AnimatedSection>
+
+        <AnimatedSection delay={500}>
+          <Contact />
+        </AnimatedSection>
+        
+        <AnimatedSection delay={600}>
           <Testimonials />
         </AnimatedSection>
       </main>
